@@ -1,7 +1,8 @@
 import * as React from "react";
 import DomPurify from "dompurify";
-import { marked } from "marked";
 import Turndown from "turndown";
+
+import { marked } from "marked";
 import { initialMarkdown as tokenizedInitialMarkdown } from "./consts";
 
 function App() {
@@ -13,7 +14,6 @@ function App() {
   /* Get the token for the initial Markdown and parse into valid Markdown */
   const tokens = marked.parser(tokenizedInitialMarkdown);
   const initialMarkdown = turndownService.turndown(tokens);
-  // console.log(initialMarkdown);
 
   /* Initialize the state with a placeholder Markdown content */
   const [value, setValue] = React.useState(initialMarkdown);
