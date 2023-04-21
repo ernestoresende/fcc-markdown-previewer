@@ -1,3 +1,6 @@
+/* This is the tokenized version of the initially rendered Markdown.
+* See: https://marked.js.org/using_pro#lexer
+* */
 export const initialMarkdown = [
   {
     "type": "heading",
